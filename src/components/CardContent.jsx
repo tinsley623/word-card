@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 
-function parseInsight(text) {
+function parseBold(text) {
   const parts = text.split(/(\*\*[^*]+\*\*)/)
   return parts.map((part, i) => {
     if (part.startsWith('**') && part.endsWith('**')) {
@@ -32,7 +32,7 @@ const CardContent = forwardRef(function CardContent({ data }, ref) {
 
         <div className="card-origin">
           <div className="card-section-label">原始画面 · ORIGIN</div>
-          <div className="card-origin-text">{data.origin.description}</div>
+          <div className="card-origin-text">{parseBold(data.origin.description)}</div>
         </div>
 
         <div className="card-symbols">
@@ -49,14 +49,14 @@ const CardContent = forwardRef(function CardContent({ data }, ref) {
 
         <div className="card-summary">
           <div className="card-summary-label">意象归结</div>
-          <div className="card-summary-text">{data.origin.summary}</div>
+          <div className="card-summary-text">{parseBold(data.origin.summary)}</div>
         </div>
 
         <div className="card-insights">
           <div className="card-section-label">深层解析 · INSIGHT</div>
           {data.insights.map((text, i) => (
             <div key={i} className="card-insight-block">
-              {parseInsight(text)}
+              {parseBold(text)}
             </div>
           ))}
         </div>
