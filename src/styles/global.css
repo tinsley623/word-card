@@ -1,0 +1,39 @@
+:root {
+  --bg-primary: #f5f0e8;
+  --bg-card: #ffffff;
+  --bg-origin: #c4b5a0;
+  --bg-epiphany: #2a2a2a;
+  --text-primary: #2a2a2a;
+  --text-secondary: #6b6358;
+  --text-muted: #9a8f82;
+  --text-light: #b8ad9e;
+  --accent: #8b4c39;
+  --accent-light: #c4a68a;
+  --border: #e0d8cc;
+  --font-serif: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+  --font-display: 'Playfair Display', 'Noto Serif SC', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-serif);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--accent-light);
+  color: var(--bg-card);
+}

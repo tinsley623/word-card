@@ -1,0 +1,342 @@
+.wordcard-page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  padding: 2rem 1rem;
+}
+
+.wordcard-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  pointer-events: none;
+}
+
+.nav-btn {
+  pointer-events: all;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.nav-btn:hover {
+  background: var(--bg-card);
+  border-color: var(--accent-light);
+}
+
+.nav-btn-dark {
+  background: var(--text-primary);
+  color: white;
+  border-color: var(--text-primary);
+}
+
+.nav-btn-dark:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Card container */
+.card-wrap {
+  max-width: 680px;
+  margin: 3.5rem auto 2rem;
+  background: var(--bg-card);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+
+.card-inner {
+  padding: 2.5rem 2.5rem 0;
+}
+
+/* Header */
+.card-ref {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.card-meta {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.75rem 0 1.5rem;
+}
+
+.card-badge {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  background: rgba(139,76,57,0.08);
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+.card-badge-date {
+  background: rgba(42,42,42,0.05);
+  color: var(--text-muted);
+}
+
+/* Main character */
+.card-char {
+  font-family: var(--font-serif);
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+.card-pinyin {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0.25rem 0;
+  letter-spacing: 0.05em;
+}
+
+.card-brief {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+/* Origin block */
+.card-origin {
+  background: var(--bg-origin);
+  border-radius: 6px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-section-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.card-origin .card-section-label {
+  color: rgba(255,255,255,0.6);
+}
+
+.card-origin-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.8;
+  color: var(--bg-card);
+}
+
+/* Core symbols */
+.card-symbols {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-symbols-title {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.card-symbols-list {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.card-symbol-tag {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.card-formula {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  font-style: italic;
+}
+
+/* Summary */
+.card-summary {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card-summary-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.card-summary-text {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  background: rgba(139,76,57,0.06);
+  border-radius: 4px;
+  font-size: 1rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+
+/* Insight paragraphs */
+.card-insights {
+  margin-bottom: 2rem;
+}
+
+.card-insight-block {
+  background: rgba(245,240,232,0.5);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--text-secondary);
+}
+
+.card-insight-block strong {
+  color: var(--text-primary);
+}
+
+/* Epiphany */
+.card-epiphany {
+  background: var(--bg-epiphany);
+  padding: 2.5rem 2.5rem 2rem;
+  text-align: center;
+}
+
+.card-epiphany-label {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+
+.card-epiphany-divider {
+  width: 2rem;
+  height: 2px;
+  background: var(--accent);
+  margin: 0.75rem auto;
+}
+
+.card-epiphany-en {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+  font-style: italic;
+}
+
+.card-epiphany-zh {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.6;
+}
+
+/* Footer */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 2.5rem;
+  background: var(--bg-epiphany);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.card-footer-text {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.05em;
+}
+
+/* Loading */
+.card-loading {
+  max-width: 680px;
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.loading-char {
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  animation: breathe 2s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.loading-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.loading-dots::after {
+  content: '';
+  animation: dots 1.5s steps(3) infinite;
+}
+
+@keyframes dots {
+  0% { content: ''; }
+  33% { content: '.'; }
+  66% { content: '..'; }
+  100% { content: '...'; }
+}
+
+/* Error */
+.card-error {
+  max-width: 680px;
+  margin: 5rem auto;
+  text-align: center;
+  padding: 3rem;
+  background: var(--bg-card);
+  border-radius: 4px;
+}
+
+.card-error h2 {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.card-error p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .card-inner { padding: 1.5rem; }
+  .card-char { font-size: 5rem; }
+  .card-origin { padding: 1.25rem 1.5rem; }
+  .card-origin-text { font-size: 1.15rem; }
+  .card-epiphany { padding: 2rem 1.5rem 1.5rem; }
+  .card-epiphany-en { font-size: 1.2rem; }
+  .card-footer { padding: 0.75rem 1.5rem; }
+}
